@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+html
+{
+    margin:0;
+}
+
+body
+{
+    margin:0;
+    font-family: 'Nunito', sans-serif;
+    background-image: url("img/muhammad-numan-ZVgxiKJlMk0-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#210F04;
+    background-attachment: fixed;
+}
+div.container
+{
+    background-color: rgba(255,255,255,0.65);
+    max-width: 1200px;
+    margin:0 auto;
+    padding:20px;
+}
+h1
+{
+    text-align:center;
+    color:#7F5539;
+    font-weight: 300;
+
+}
+
+p#description
+{
+    color:#452103;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #690500;
+    font-style: italic;
+    font-weight: 600;
+}
+
+form#survey-form h4
+{
+    color:#690500;
+    text-align: center;
+}
+
+form#survey-form
+{
+    display: grid;
+}
+
+form#survey-form input, form#survey-form select
+{
+    border-radius: 5px;
+    border:1px solid #690500;
+    padding:5px;
+    outline:none;
+}
+
+form#survey-form input:focus-visible, form#survey-form select:focus-visible
+{
+    border:2px solid #690500;
+}
+
+form#survey-form input
+{
+    margin-bottom: 20px;
+}
+div.grid-container-4
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+div.notes, div.foirage
+{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 5px;
+}
+
+form#survey-form textarea
+{
+    font-family: "nunito",sans-serif;
+    text-align: left;
+    padding:10px;
+}
+
+form#survey-form button
+{
+    background-color: #690500;
+    color:#fff;
+    font-weight: 600;
+    width:200px;
+    height:50px;
+    font-size: 1em;
+    display: block;
+    margin:10px auto;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+
+}
+
+form#survey-form button:hover
+{
+    border:2px solid #690500;
+    background-color: #fff;
+    color: #690500;
+}
+
+form#survey-form button:active
+{
+    position:relative;
+    top:2px;
+}
+
+@media (max-width: 600px){
+    div.grid-container-4
+    {
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 10px;
+    }
+}
+
+@media (max-width: 375px){
+    div.grid-container-4
+    {
+        grid-template-columns: 1fr;
+    }
+}

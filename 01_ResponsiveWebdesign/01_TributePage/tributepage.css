@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* @font-face {
+    font-family: 'Supernatural Knight';
+    font-style: normal;
+    font-weight: 400;
+    src:
+        local('Supernatural Knight'),
+        url(fonts/Supernatural_Knight.ttf)
+        ;
+} */
+
+@font-face {
+    font-family: 'Supernatural Knight';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Supernatural Knight'), url('https://fonts.cdnfonts.com/s/8404/Supernatural_Knight.woff') format('woff');
+}
+
+body
+{
+    font-family: 'Ubuntu', sans-serif;
+    margin:0;
+    color:#212529
+}
+
+
+
+div#main
+{
+    max-width: 1200px;
+    margin:0 auto;
+    background-color:#F8F9FA;
+    
+
+}
+/*-----------------------------------------------HEADER */
+header
+{
+    background-color: #212529;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+    color:#F8F9FA;
+    column-gap: 20px;
+}
+
+header h1
+{
+    font-family: "Supernatural Knight", sans-serif;
+    font-size:3em;
+    line-height: 150%;
+}
+
+h2
+{
+    font-family: "Supernatural Knight", sans-serif;
+    font-size: 2em;
+    line-height: 120%;
+}
+
+header p#img-caption 
+{
+    font-weight:700;
+    font-style: italic;
+
+}
+
+header img#image
+{
+    width:100%;
+    height:auto;
+    margin:0 auto;
+}
+
+header svg
+{
+    grid-column: span 2;
+    margin:-20px;
+}
+/*-----------------------------------------------MAIN*/
+main 
+{
+    padding:20px;
+}
+section#tribute-info section
+{
+    display: grid;
+    align-items: center;
+    margin-bottom: 20px;
+    column-gap: 20px;
+
+}
+
+section#tribute-info h2
+{
+    text-align:center;
+    line-height: 150%;
+
+}
+
+section#tribute-info section.grid-img-left
+{
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "img text";
+    justify-items: start;
+    background-color: #212529;
+    color:#F8F9FA;
+    padding:10px;
+}
+
+section#tribute-info section.grid-img-right
+{
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "text img";
+    justify-items: end;
+    text-align: right;
+    color: #212529;
+    border: 10px solid #212529;
+    padding-left: 10px;
+
+
+}
+
+section#tribute-info img
+{
+    grid-area: img;
+    width:100%;
+    height:auto;
+}
+
+section#tribute-info p
+{
+    grid-area: text;
+    
+    text-transform: uppercase;
+    font-size: 1.5em;
+    
+    margin:10px;
+
+}
+/*-----------------------------------------------MORE*/
+section#more
+{
+    text-align:center;
+    line-height: 200%;
+    margin-top:50px;
+    line-height: 200%;
+}
+
+section#more a, section#more a:visited
+{
+    font-family: "Supernatural Knight", sans-serif; 
+    color:#212529;
+    text-decoration:none;
+    font-size: 2em;
+    margin:10px 0;
+}
+
+section#more a:hover
+{
+    position:relative;
+    bottom:5px;
+    border-bottom:2px solid #212529;
+    padding-bottom:3px;
+}
+
+section#more div
+{
+    margin:10px 0;
+}
+
+
+/*-----------------------------------------------FOOTER*/
+footer
+{
+    background-color: #212529;
+    text-align: center;
+    color:#F8F9FA;
+    padding-bottom:20px;
+}
+
+footer a
+{
+    color:#F8F9FA;
+
+}
+footer span.material-icons
+{
+    vertical-align: middle;
+}
+/*-----------------------------------------------RESPONSIVE */
+@media (max-width: 992px){
+    section#tribute-info section.grid-img-left, section#tribute-info section.grid-img-right
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 768px) {
+    
+    section#tribute-info p
+    {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px){
+    main
+    {
+        padding:10px;
+    }
+    header
+    {
+        grid-template-columns: 1fr;
+
+    }
+
+    header svg
+    {
+        grid-column: initial;
+    }
+
+    section#tribute-info section.grid-img-left, section#tribute-info section.grid-img-right
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: unset;
+        text-align: center;
+    }
+    
+    section#tribute-info section.grid-img-right
+    {
+        padding-left: 0;
+    }
+    section#tribute-info img
+    {
+        grid-area: unset;
+    }
+
+    section#tribute-info p
+    {
+        grid-area: unset;
+        margin:10px auto;
+        
+    }
+}

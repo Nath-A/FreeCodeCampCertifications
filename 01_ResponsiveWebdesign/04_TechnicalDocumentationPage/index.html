@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page - How the minmax() Function Works</title>
+    <link rel="stylesheet" href="TechnicalDocumentationPage.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>How the minmax() Function Works</header>
+        <ul>
+            <li><a href="#The_minmax()_Function" class="nav-link">The minmax() Function</a></li>
+            <li><a href="#Length" class="nav-link">length</a></li>
+            <li><a href="#Percentage" class="nav-link">percentage</a></li>
+            <li><a href="#Flexible_Length" class="nav-link">flexible length</a></li>
+            <li><a href="#max-content" class="nav-link">max-content</a></li>
+            <li><a href="#min-content" class="nav-link">min-content</a></li>
+            <li><a href="#auto" class="nav-link">auto</a></li>
+            <li><a href="#Responsive_Design_without_Media_Queries" class="nav-link">Responsive Design without Media Queries</a></li>
+            <li><a href="#reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="The_minmax()_Function">
+            <header>The minmax() Function</header>
+            <p>The <strong>minmax()</strong> function accepts two parameters, a minimum value and a maximum value.</p>
+            <code>minmax(min, max)</code>
+            <p>If the maximum value defined is actually less than the minimum, it is ignored, and the function is treated as purely presenting a minimum value.</p>
+            <p>The <strong>minmax()</strong> function accepts 6 types of value:</p>
+            <p>
+                <ul>
+                    <li>Length</li>
+                    <li>Percentage</li>
+                    <li>Flexible Length</li>
+                    <li><strong>max-content</strong></li>
+                    <li><strong>min-content</strong></li>
+                    <li><strong>auto</strong></li>
+                </ul>
+            </p>
+            <p>Let’s consider examples of each.</p>
+        </section>
+        <section class="main-section" id="Length">
+            <header>Length</header>
+            <p>Perhaps the most simple value we can use with the <strong>minmax()</strong> function is a basic length. Take, for example, this simple grid, which has three columns and a single row.</p>
+            <img src="https://bitsofco.de/content/images/2017/06/default.png" alt="grid 3 columns">
+            <p>Using the <strong>minmax()</strong> function, we can specify that the yellow grid cell remain between 100px and 200px. As the viewport is resized, the absolute value will change, but always within these two limits.</p>
+                <code>
+                    .grid
+                    {
+                        display: grid;
+                        grid-template-columns: minmax(100px, 200px) 1fr 1fr;
+                    }
+                </code>
+            
+            <img src="https://bitsofco.de/content/images/2017/06/length-1.gif" alt="grid minmax 100-200px">
+            <p>The second and third columns shrink and expand to fill the remaining available space equally, but the first column always remains between 100px and 200px wide.</p>
+        </section>
+        <section class="main-section" id="Percentage">
+            <header>Percentage</header>
+            <p>Besides the basic length units, we can also use percentage units with the <strong>minmax()</strong> function.<br/>
+            Say, for example, that we want the yellow grid cell to take up a maximum of 50% of the grid, but not get any smaller than 200px.</p>
+            <code>
+                .grid
+                {
+                    display: grid;
+                    grid-template-columns: minmax(200px, 50%) 1fr 1fr;
+                }
+            </code>
+            <img src="https://bitsofco.de/content/images/2017/06/percentage.gif" alt="grid minmax 200px 50%">
+            <p>No matter how small we shrink the viewport, the yellow cell never gets smaller than 200px.<br/>But, when it has the room to, is grows to a maximum of half the grid width.</p>
+
+        </section>
+        <section class="main-section" id="Flexible_Length">
+            <header>Flexible Length</header>
+            <p>The Flexible Length is a new unit which, like the <strong>minmax()</strong> function, was also introduced with the CSS Grid Layout Specification. This length, which uses the fr unit, represents a fraction of the free space in the grid container. For example, let’s say we have a 100px-wide grid, with 2 columns. One column has a fixed width of 20px and the other column has a width of 1fr.<br/>The second column will effectively have a width of 80px, as it takes up the remaining available space within the grid.</p>
+            <p>Currently, the <strong>fr</strong> unit can only be used as the maximum value in the <strong>minmax()</strong> function (although it is <a href="https://www.w3.org/TR/css-grid-1/#valdef-grid-template-columns-minmax" target="_blank" rel="noopener noreferrer">noted in the spec</a> that, in the future, it may be applicable to the minimum value as well). Going back to our example, we can specify that we want the yellow grid cell to be a minimum of 200px. If the viewport is resized larger than that, we want the cell to be 1fr, the same size as the other two columns.</p>
+            <code>
+                .grid 
+                {
+                    display: grid;
+                    grid-template-columns: minmax(200px, 1fr) 1fr 1fr;
+                }
+            </code>
+            <img src="https://bitsofco.de/content/images/2017/06/fr.gif" alt="grid minmax 200px 1fr">
+            <p>Since all columns are 1fr at larger viewport sizes, they share an equal amount of space within the grid.</p>
+        </section>
+        <section class="main-section" id="max-content">
+            <header>max-content</header>
+            <p>The <strong>max-content</strong> keyword is a special value that represents the cell’s "ideal size". This is the smallest possible size the cell can be, while still fitting around it’s contents unobtrusively. For example, if the contents of the cell is a sentence, the ideal width for the cell will be to take up the entire length of the sentence, regardless of the length and no line breaks.</p>
+            <p>Taking our previous example, let’s specify that the yellow grid cell be both a minimum and maximum of <strong>max-content</strong>.</p>
+            <code>
+                .grid 
+                {
+                    display: grid;
+                    grid-template-columns: minmax(max-content, max-content) 1fr 1fr;
+                }
+            </code>
+            <img src="https://bitsofco.de/content/images/2017/06/max-content.gif" alt="grid minmax max-content">
+            <p>As we can see, the size of the column expands to fit the entire length of the string. Since both the minimum and maximum values are set to <strong>max-content</strong>, the width of the column remains the same.</p>
+        </section>
+        <section class="main-section" id="min-content">
+            <header>min-content</header>
+            <p>The <strong>min-content</strong> keyword, like <strong>max-content</strong>, is a special value. It represents the smallest possible size the cell can be that does not lead to an overflow, unless that overflow is unavoidable.</p>
+            <p>To illustrate the difference between <strong>min-content</strong> and <strong>max-content</strong>, we can use the same content as in the previous example, but set both values of the <strong>minmax()</strong> function to <strong>min-content</strong>.</p>
+            <code>
+                .grid 
+                {
+                    display: grid;
+                    grid-template-columns: minmax(min-content, min-content) 1fr 1fr;
+                }
+            </code>
+            <img src="https://bitsofco.de/content/images/2017/06/min-content.gif" alt="grid minmax() min-content">
+            <p>We can see that the content within the cell is shifted in order to take up the least amount of horizontal space possible, without causing any overflow.</p>
+        </section>
+        <section class="main-section" id="auto">
+            <header>auto</header>
+            <p>Finally, we have <strong>auto</strong>. This has different meanings depending on if it is used as the maximum or minimum value in the <strong>min-content</strong> function.</p>
+            <p>If used as a maximum, the <strong>auto</strong> value is equivalent to the max-content value. If used as a minimum, the <strong>auto</strong> value represents the largest minimum size the cell can be. This "largest minimum size" is different from the <strong>min-content</strong> value, and specified by <strong>min-width/min-height</strong>.</p>
+            <p>To illustrate this, here's what happens when the yellow grid cell in our example is set to an <strong>auto</strong> minimum and maximum.</p>
+            <code>
+                .grid 
+                {
+                    display: grid;
+                    grid-template-columns: minmax(auto, auto) 1fr 1fr;
+                }
+            </code>
+            <img src="https://bitsofco.de/content/images/2017/06/auto.gif" alt="grid minmax() auto">
+        </section>
+        <section class="main-section" id="Responsive_Design_without_Media_Queries">
+            <header>Responsive Design without Media Queries</header>
+            <p>As we have seen, there are several cases where using the <strong>minmax()</strong>() function is suitable, and we can use it in several ways. But perhaps the most popular and useful case for the <strong>minmax()</strong> function it's ability to enable us create responsive designs without the use of any media queries.</p>
+            <p>Let's take this example grid:</p>
+            <img src="https://bitsofco.de/content/images/2017/06/responsive.gif" alt="Grid responsive design without media queries">
+            <p>Each column in the grid has a minimum width of 200px. As the viewport is resized, the number of columns changes to fit their ideal width. With CSS Grid and the <strong>minmax()</strong> function, this can be created in as little as 2 lines of CSS.</p>
+            <code>
+                .grid 
+                {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+            </code>
+            <p>Besides the <strong>minmax()</strong> function, there are two other key parts to this:</p>
+            <p>
+                <ul>
+                    <li><strong>repeat()</strong>: This function allows us to specify the same value for multiple columns in the grid. It accepts two values: the number of times to repeat, and the value to be repeated.</li>
+                   <li><strong>auto-fit</strong>: This keyword can be used with the repeat() function instead a number of times to repeat. This will flexibly change the number of columns that are used based on the width each column can be.</li>
+                </ul>
+            </p>
+            <p>One, in my opinion quite major, limitation of this technique, however, is that it only works when each column is of equal width. We have to use the <strong>repeat()</strong> function with the <strong>auto-fit</strong> keyword, as this is what allows the number of columns to be flexible. Nonetheless, this can still an extremely useful technique in the right circumstances.</p>
+        </section>
+        <section class="main-section" id="reference">
+            <header>reference</header>
+            <p>All the documentation in this page is taken from <a href="https://bitsofco.de/how-the-minmax-function-works/" target="_blank" rel="noopener noreferrer">bitsofco.de</a> and is written by <a href="https://ireaderinokun.com/" target="_blank" rel="noopener noreferrer">Ire Aderinokun</a></p>
+        </section>
+    </main>
+</body>
+</html>

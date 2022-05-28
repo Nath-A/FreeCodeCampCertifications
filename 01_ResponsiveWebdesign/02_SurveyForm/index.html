@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SurveyForm.css">
+    <title>SurveyForm</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">La décennie 2020 </h1>
+        <p id="description">Parce que cette décennie est un long lundi matin pluvieux de novembre, à trottinette dans le
+            rond-point Meiser aux heures de pointe.</p>
+        <form id="survey-form">
+            <label for="name" id="name-label">Pseudo</label>
+            <input type="text" name="" id="name" placeholder="Comment qu'on peut t'appeler ?" required>
+
+            <label for="email" id="email-label">E-mail</label>
+            <input type="email" name="" id="email" placeholder="Et comment qu'on peut te répondre ?" required>
+
+            <label for="number" id="number-label">Age</label>
+            <input type="number" name="" id="number" min="6" max="111"
+                placeholder="Ca fait combien de temps que tu foules cette terre ?">
+
+            <label for="" id="">Quelle est la pire année de cette foutue décennie ?</label>
+            <select id="dropdown">
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+            <div class="grid-container-4" id="notes">
+                <div id="2020">
+                    <h4>Ta note pour l'année 2020</h4>
+                    <div class="notes">
+                        <input type="radio" name="note-2020" id="1" value="1">
+                        <label for="1">1/10</label>
+                        <input type="radio" name="note-2020" id="2" value="2">
+                        <label for="2">2/10</label>
+                        <input type="radio" name="note-2020" id="3" value="3">
+                        <label for="3">3/10</label>
+                        <input type="radio" name="note-2020" id="4" value="4">
+                        <label for="4">4/10</label>
+                        <input type="radio" name="note-2020" id="5" value="5">
+                        <label for="5">5/10</label>
+                        <input type="radio" name="note-2020" id="6" value="6">
+                        <label for="6">6/10</label>
+                        <input type="radio" name="note-2020" id="7" value="7">
+                        <label for="7">7/10</label>
+                        <input type="radio" name="note-2020" id="8" value="8">
+                        <label for="8">8/10</label>
+                        <input type="radio" name="note-2020" id="9" value="9">
+                        <label for="9">9/10</label>
+                        <input type="radio" name="note-2020" id="10" value="10">
+                        <label for="10">10/10</label>
+                    </div>
+                </div>
+
+                <div id="2021">
+                    <h4>Ta note pour l'année 2021</h4>
+                    <div class="notes">
+                        <input type="radio" name="note-2021" id="1" value="1">
+                        <label for="1">1/10</label>
+                        <input type="radio" name="note-2021" id="2" value="2">
+                        <label for="2">2/10</label>
+                        <input type="radio" name="note-2021" id="3" value="3">
+                        <label for="3">3/10</label>
+                        <input type="radio" name="note-2021" id="4" value="4">
+                        <label for="4">4/10</label>
+                        <input type="radio" name="note-2021" id="5" value="5">
+                        <label for="5">5/10</label>
+                        <input type="radio" name="note-2021" id="6" value="6">
+                        <label for="6">6/10</label>
+                        <input type="radio" name="note-2021" id="7" value="7">
+                        <label for="7">7/10</label>
+                        <input type="radio" name="note-2021" id="8" value="8">
+                        <label for="8">8/10</label>
+                        <input type="radio" name="note-2021" id="9" value="9">
+                        <label for="9">9/10</label>
+                        <input type="radio" name="note-2021" id="10" value="10">
+                        <label for="10">10/10</label>
+                    </div>
+                </div>
+                <div id="2022">
+                    <h4>Ta note pour l'année 2022</h4>
+                    <div class="notes">
+                        <input type="radio" name="note-2022" id="1" value="1">
+                        <label for="1">1/10</label>
+                        <input type="radio" name="note-2022" id="2" value="2">
+                        <label for="2">2/10</label>
+                        <input type="radio" name="note-2022" id="3" value="3">
+                        <label for="3">3/10</label>
+                        <input type="radio" name="note-2022" id="4" value="4">
+                        <label for="4">4/10</label>
+                        <input type="radio" name="note-2022" id="5" value="5">
+                        <label for="5">5/10</label>
+                        <input type="radio" name="note-2022" id="6" value="6">
+                        <label for="6">6/10</label>
+                        <input type="radio" name="note-2022" id="7" value="7">
+                        <label for="7">7/10</label>
+                        <input type="radio" name="note-2022" id="8" value="8">
+                        <label for="8">8/10</label>
+                        <input type="radio" name="note-2022" id="9" value="9">
+                        <label for="9">9/10</label>
+                        <input type="radio" name="note-2022" id="10" value="10">
+                        <label for="10">10/10</label></div>
+                </div>
+                <div id="2023">
+
+                    <h4>Tes pronostics pour l'année 2023</h4>
+                    <div class="notes">
+                        <input type="radio" name="note-2023" id="1" value="1">
+                        <label for="1">1/10</label>
+                        <input type="radio" name="note-2023" id="2" value="2">
+                        <label for="2">2/10</label>
+                        <input type="radio" name="note-2023" id="3" value="3">
+                        <label for="3">3/10</label>
+                        <input type="radio" name="note-2023" id="4" value="4">
+                        <label for="4">4/10</label>
+                        <input type="radio" name="note-2023" id="5" value="5">
+                        <label for="5">5/10</label>
+                        <input type="radio" name="note-2023" id="6" value="6">
+                        <label for="6">6/10</label>
+                        <input type="radio" name="note-2023" id="7" value="7">
+                        <label for="7">7/10</label>
+                        <input type="radio" name="note-2023" id="8" value="8">
+                        <label for="8">8/10</label>
+                        <input type="radio" name="note-2023" id="9" value="9">
+                        <label for="9">9/10</label>
+                        <input type="radio" name="note-2023" id="10" value="10">
+                        <label for="10">10/10</label>
+                    </div>
+                </div>
+
+            </div>
+            <h4>Qu'est ce qui a foiré pendant cette décennie ?</h4>
+            <div id="domaines" class="grid-container-4">
+                <div class="foirage">
+                    <input type="checkbox" name="domaine-foireux" id="sante" value="sante">
+                    <label for="sante">La santé</label>
+                </div>
+                <div class="foirage">
+                    <input type="checkbox" name="domaine-foireux" id="travail-formation" value="travail-formation">
+                    <label for="travail-formation">Le boulot, les études ou une formation</label>
+                </div>
+                <div class="foirage">
+                    <input type="checkbox" name="domaine-foireux" id="amour" value="amour">
+                    <label for="amour">Le lovi lova</label></div>
+                <div class="foirage">
+                    <input type="checkbox" name="domaine-foireux" id="famille" value="famille">
+                    <label for="famille">La famillia</label>
+                </div>
+                <div class="foirage">
+                    <input type="checkbox" name="domaine-foireux" id="projet" value="projet">
+                    <label for="projet">Les projets</label>
+                </div>
+                <div class="foirage">
+                    <input type="checkbox" name="domaine-foireux" id="habitat" value="habitat">
+                    <label for="habitat">Mon lieu de vie</label>
+                </div>
+                <div class="foirage">
+                    <input type="checkbox" name="domaine-foireux" id="amis" value="amis">
+                    <label for="amis">Mes poteaux</label>
+                </div>
+                <div class="foirage">
+                    <input type="checkbox" name="domaine-foireux" id="finance" value="finance">
+                    <label for="finance">la tunasse</label>
+                </div>
+            </div>
+            <h4>Un petit mot pour la fin ?</h4>
+            <textarea name="" id="defouloir" cols="30" rows="10" placeholder="Envie de nous en dire plus sur la merdicité de cette décennie ?"></textarea>
+<button type="submit" id="submit">Envoyer cette merde</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
