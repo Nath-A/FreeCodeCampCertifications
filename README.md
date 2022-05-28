@@ -1,10 +1,10 @@
 # FreeCodeCamp Certifications
 ## 01 Responsive Webdesign
-- [x] [Tribute Page](01_ResponsiveWebdesign/01_TributePage/index.html)
-- [x] [Survey Form](01_ResponsiveWebdesign/02_SurveyForm/index.html)
-- [x] [Landing Page](01_ResponsiveWebdesign/03_LandingPage/index.html)
-- [x] [Technical Documentation Page](01_ResponsiveWebdesign/04_TechnicalDocumentationPage/index.html)
-- [ ] [Portfolio](01_ResponsiveWebdesign/05_Portfolio/Portfolio.html) **WIP**
+- [x] [Tribute Page](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/01_TributePage/index.html)
+- [x] [Survey Form](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/02_SurveyForm/index.html)
+- [x] [Landing Page](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/03_LandingPage/index.html)
+- [x] [Technical Documentation Page](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/04_TechnicalDocumentationPage/index.html)
+- [ ] [Portfolio](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/05_Portfolio/Portfolio.html) **WIP**
 
 ## 02 JavaScript Algorithms and Data Structures
 - [ ] Palindrome Checker
