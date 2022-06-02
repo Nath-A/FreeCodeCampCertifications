@@ -23,13 +23,6 @@ body
     background-color: #f7f5fb;
 }
 
-h1, h2, h3
-{
-    font-family: "Libre Baskerville", sans-serif;
-    font-weight: 300;
-    
-}
-
 h1
 {
     font-size:2.2em;
@@ -52,6 +45,11 @@ h6
     font-size:1em;
 }
 
+
+h1, h2, h3
+{
+    font-weight: 300;
+}
 .red
 {
     color:#de1a1a;
@@ -175,6 +173,41 @@ section#welcome-section div.content > *:hover
     transform: translateX(20px);
     
 }
+
+section#welcome-section h1, section#welcome-section h2, section#welcome-section h3
+{
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: 300;
+    
+}
+/*! --------------------------------- PROJECTS */
+section#projects
+{
+    background-color: #08090a;
+    color:#f7f5fb;
+    min-height:100vh;
+}
+section#projects h2
+{
+    padding-top:100px;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+div#projects-container
+{
+    max-width: 1200px;
+    margin:auto;
+    display: grid;
+    grid-template: repeat(4,1fr);
+    column-gap:20px;
+    row-gap:20px;
+    background-color: #f7f5fb;
+}
+
+/*! --------------------------------- EXPERIENCE */
+
+
 /*! --------------------------------- FOOTER */
 footer
 {
