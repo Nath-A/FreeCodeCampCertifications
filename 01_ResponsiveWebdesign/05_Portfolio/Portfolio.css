@@ -1,6 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/*! --------------------------------- GLOBAL */
 
-html, body
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap');
+
+/* 
+--maximum-red: #de1a1a;
+--fulvous: #d78521;
+--ghost-white: #f7f5fb;
+--metallic-seaweed: #1f7a8c;
+--rich-black-fogra-39: #08090a; */
+
+*
 {
     margin:0;
     padding:0;
@@ -8,12 +18,167 @@ html, body
 
 body
 {
-    color: #03071E;
+    color: #08090a;
     font-family: "Source Sans Pro", sans-serif;
+    background-color: #f7f5fb;
 }
 
-section#welcome-section
+h1, h2, h3
+{
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: 300;
+    
+}
+
+h1
+{
+    font-size:2.2em;
+}
+
+h2
+{
+    font-size: 1.7em;
+}
+
+h3
+{
+    font-size:1.5em;
+    font-style:italic;
+}
+
+h6
+{
+    font-weight: 300;
+    font-size:1em;
+}
+
+.red
+{
+    color:#de1a1a;
+}
+
+a
+{
+    color:#de1a1a;
+    font-weight:700;
+    text-decoration:none;
+}
+
+/* a:hover
+{
+    position: relative;
+    padding-bottom:3px;
+    bottom:3px;
+    border-bottom:1px solid #de1a1a;
+} */
+
+ul
+{
+    list-style:none;
+}
+
+.code
+{
+    font-family:"Source Code Pro", monospace;
+}
+
+/*! --------------------------------- NAV */
+nav#navbar, nav#navbar ul
+{
+    display:flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+nav#navbar
+{    
+    justify-content: space-between;
+    position:sticky;
+    top:0;
+    background-color: #08090a;
+    padding:20px;
+    border-bottom:3px solid #de1a1a;
+}
+
+
+nav#navbar img
+{
+    transition: 0.4s;
+}
+
+nav#navbar img:hover
+{
+    transform: scale(105%);
+}
+
+nav#navbar a
+{
+    padding:10px 20px;
+    transition: 0.4s;
+
+} 
+nav#navbar ul a:hover 
+{
+    color:#f7f5fb;
+    
+}
+
+
+nav#navbar li
+{
+    transition:0.5s;
+}
+nav#navbar li:hover
+{
+    transform: translateY(-5px);
+} 
+
+@media (max-width: 576px){
+    nav#navbar, nav#navbar ul
+    {
+        justify-content: center;
+    }
+    nav#navbar li
+    {
+        margin:5px;
+    }
+
+}
+
+/*! --------------------------------- MAIN */
+/*! --------------------------------- WELCOME */
+
+section#welcome-section 
 {
     height:100vh;
+    display:grid;
+    align-content: center;
+    justify-content: center;
+}
+section#welcome-section div.content
+{
+    border-left:2px solid #de1a1a;
 }
 
+section#welcome-section div.content > *
+{
+    padding:25px 50px;
+    transition: 0.5s;    
+}
+
+section#welcome-section div.content > *:hover
+{
+    /* position:relative;
+    left:5px; */
+    transform: translateX(20px);
+    
+}
+/*! --------------------------------- FOOTER */
+footer
+{
+    display: flex;
+    justify-content: space-between;
+
+}
