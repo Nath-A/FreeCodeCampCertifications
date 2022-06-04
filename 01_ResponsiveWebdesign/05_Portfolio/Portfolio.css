@@ -209,6 +209,7 @@ div#projects-container
     margin:auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    padding:5px 10px;
 }
 
 
@@ -221,19 +222,37 @@ div#projects-container a
 
 section#projects ul
 {
-    display:flex;
+    display:none;
     flex-flow:row wrap;
+    justify-content: center;
 }
 
-/* div.project-tile
+section#projects li
 {
-    flex-grow: 1;
+    padding:2px 4px;
+    border-radius:5px;
+    border:1px solid #f7f5fb;
+    margin:5px;
+    font-size:0.7em;
 }
-div.project-tile:hover
-{
-    flex-grow: 2;
-} */
 
+section#projects div.project-tile
+{
+    min-height:100vh;
+}
+
+section#projects div#DiVintage
+{
+    background-image:url();
+}
+
+section#projects div#DiVintage:hover > ul, 
+section#projects div#BenoitChangeat:hover > ul,
+section#projects div#COPEB:hover > ul,
+section#projects div#MOTEEV:hover > ul
+{
+    display:flex; 
+}
 
 
 /*! --------------------------------- EXPERIENCE */
@@ -251,10 +270,7 @@ section#skills ul
     justify-content: space-around;
 }
 /*! --------------------------------- SKILLS */
-section#contact
-{
-    
-}
+
 section#contact ul
 {
     display: flex;
