@@ -225,6 +225,7 @@ section#projects ul
     display:none;
     flex-flow:row wrap;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 section#projects li
@@ -243,13 +244,15 @@ section#projects div.project-tile
 
 section#projects div#DiVintage
 {
-    background-image:url();
+    background-image:url(img/Catalogue-V1.1.jpg);
+    background-size: cover;
+    background-position: top center;
 }
 
-section#projects div#DiVintage:hover > ul, 
-section#projects div#BenoitChangeat:hover > ul,
-section#projects div#COPEB:hover > ul,
-section#projects div#MOTEEV:hover > ul
+section#projects div#DiVintage:hover > :is(h3, h4, h5, ul), 
+section#projects div#BenoitChangeat:hover > ul
+section#projects div#COPEB:hover > ul
+section#projects div#MOTEEV:hover > ul 
 {
     display:flex; 
 }
