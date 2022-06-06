@@ -254,22 +254,22 @@ section#projects div.project-tile
 
 section#projects div#DiVintage
 {
-    background-image:url(img/Catalogue-V1.1.jpg);
+    background-image:url(https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/05_Portfolio/img/Catalogue-V1.1.jpg);
 }
 
 section#projects div#BenoitChangeat
 {
-    background-image:url(img/BenoitChangeatMaquette.jpg);
+    background-image:url(https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/05_Portfolio/img/BenoitChangeatMaquette.jpg);
 }
 
 section#projects div#COPEB
 {
-    background-image:url(img/Copeb.jpg);
+    background-image:url(https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/05_Portfolio/img/Copeb.jpg);
 }
 
 section#projects div#MOTEEV
 {
-    background-image:url(img/moteev.jpg);
+    background-image:url(https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/05_Portfolio/img/moteev.jpg);
 }
 
 section#projects :is(h3, h4, h5, ul)
