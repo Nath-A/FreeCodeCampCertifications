@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6
 h1
 {
     font-size:2.2em;
+    
 }
 
 h2
@@ -39,8 +40,9 @@ h2
 
 h3
 {
-    font-size:1.5em;
+    font-size:1.2em;
     font-style:italic;
+    font-family: "Libre Baskerville", sans-serif;
 }
 
 h6
@@ -198,9 +200,10 @@ section#projects
 }
 section#projects h2
 {
-    padding-top:100px;
+    padding:100px 0 20px 0;
     text-align:center;
     text-transform: uppercase;
+    font-size:3em;
 }
 
 div#projects-container
@@ -209,6 +212,7 @@ div#projects-container
     margin:auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    column-gap: 10px;
     padding:5px 10px;
 }
 
@@ -225,7 +229,7 @@ section#projects ul
     display:none;
     flex-flow:row wrap;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    
 }
 
 section#projects li
@@ -240,24 +244,90 @@ section#projects li
 section#projects div.project-tile
 {
     min-height:100vh;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    /* align-items: center; */
+    background-size: cover;
+    background-position: top center;
 }
 
 section#projects div#DiVintage
 {
     background-image:url(img/Catalogue-V1.1.jpg);
-    background-size: cover;
-    background-position: top center;
 }
 
-section#projects div#DiVintage:hover > :is(h3, h4, h5, ul), 
-section#projects div#BenoitChangeat:hover > ul
-section#projects div#COPEB:hover > ul
+section#projects div#BenoitChangeat
+{
+    background-image:url(img/BenoitChangeatMaquette.jpg);
+}
+
+section#projects div#COPEB
+{
+    background-image:url(img/Copeb.jpg);
+}
+
+section#projects div#MOTEEV
+{
+    background-image:url(img/moteev.jpg);
+}
+
+section#projects :is(h3, h4, h5, ul)
+{
+    display: none;
+    padding:5px 0;
+
+}
+
+section#projects div#DiVintage:hover > ul, 
+section#projects div#BenoitChangeat:hover > ul, 
+section#projects div#COPEB:hover > ul, 
 section#projects div#MOTEEV:hover > ul 
 {
     display:flex; 
+    background: rgba(0, 0, 0, 0.4);
+}
+section#projects div#DiVintage:hover > :is(h3, h4, h5), 
+section#projects div#BenoitChangeat:hover > :is(h3, h4, h5), 
+section#projects div#COPEB:hover > :is(h3, h4, h5), 
+section#projects div#MOTEEV:hover > :is(h3, h4, h5) 
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
 }
 
+@media (max-width: 768px)
+{
+    div#projects-container
+    {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,50vh);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+    section#projects div.project-tile
+    {
+        min-height:initial;
+    }
 
+    section#projects div#COPEB
+    {
+        min-height: 50vh;
+    }
+}
+
+@media (max-width: 576px){
+    div#projects-container
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(4,1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
 /*! --------------------------------- EXPERIENCE */
 section#experiences div.experiences_container
 {
@@ -266,27 +336,97 @@ section#experiences div.experiences_container
 
 }
 /*! --------------------------------- SKILLS */
+section#skills 
+{
+    max-width:1200px;
+    margin:auto;
+}
+section#skills h2
+{
+    font-size:3em;
+    padding-top:100px;
+    text-transform: uppercase;
+    margin-bottom:10px;
+}
+section#skills h3 
+{
+    padding:50px 0 15px 0;
+    font-size:2em;
+}
 section#skills ul
 {
     display:flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    margin:20px 0 50px 0;
 }
-/*! --------------------------------- SKILLS */
+section#skills li
+{
+    display: flex;
+    flex-flow:column wrap;
+    align-items: center;
+}
 
+/*! --------------------------------- CONTACT */
+section#contact
+{
+    min-height: 100vh;
+    background-color: #08090a;
+    color:#f7f5fb;
+    display:grid;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+
+}
+section#contact h2
+{
+    font-size:3em;
+    padding-top:100px;
+    text-transform: uppercase;
+    margin-bottom:10px;
+}
 section#contact ul
 {
     display: flex;
     flex-flow:row wrap;
-    justify-content: space-around;
+    margin-top:50px;
+    max-width:1200px;
 }
+
+section#contact li
+{
+    padding:30px;
+} 
+
+section#contact a 
+{
+    color:#f7f5fb;
+}
+section#contact a:hover 
+{
+    color:#de1a1a;
+}
+section#contact i 
+{
+    font-size:3em;
+    transition: 0.4s;
+}
+
+section#contact i:hover
+{
+    transform: scale(110%);
+} 
 /*! --------------------------------- FOOTER */
 footer
 {
-    background-color:#08090a;
-    color:#f7f5fb;
+    color:#08090a;
+    background-color:#f7f5fb;
     padding:20px;
     display: flex;
     justify-content: space-between;
+    border-top:2px solid #de1a1a;
+    align-items: center;
+    font-weight: 600;
 
 }
