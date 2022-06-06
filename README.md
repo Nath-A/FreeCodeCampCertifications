@@ -4,7 +4,9 @@
 - [x] [Survey Form](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/02_SurveyForm/index.html)
 - [x] [Landing Page](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/03_LandingPage/index.html)
 - [x] [Technical Documentation Page](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/04_TechnicalDocumentationPage/index.html)
-- [ ] [Portfolio](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/05_Portfolio/Portfolio.html) **WIP**
+- [x] [Portfolio](https://nathalie-anneessens.github.io/FreeCodeCampCertifications/01_ResponsiveWebdesign/05_Portfolio/Portfolio.html)
+
+[![Ma belle petite certification Irda <3](_ReadmeFiles/FCC-ResponsiveWebDesign-certification.jpg)](https://www.freecodecamp.org/certification/nath_A/responsive-web-design)
 
 ## 02 JavaScript Algorithms and Data Structures
 - [ ] Palindrome Checker
